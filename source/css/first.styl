@@ -1,7 +1,31 @@
 // 本文件样式最佳方案是内联写在HTML中 暂未找到内联自动化方案
 // https://blog.skk.moe/post/improve-fcp-for-my-blog/
 #safearea{
-  display: none
+  display: none;
+  .fa-weixin {
+    position: relative;
+  }
+  .fa-weixin img.qrcode {
+    position: absolute;
+    z-index: 9;
+    top: -135px;
+    right: -43px;
+    width: 7.5rem;
+    max-width: none;
+    height: 7.5rem;
+    transform: scale(0);
+    transform-origin: bottom;
+    opacity: 0;
+    //border: .1rem solid #0085ba;
+    border-radius: .25rem;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  .fa-weixin:hover img.qrcode {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 @import '_defines/*'
 
