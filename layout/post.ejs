@@ -4,3 +4,8 @@
 </div>
 <%- partial('_partial/side') %>
 
+<script>
+  if(typeof jQuery == 'undefined' && typeof create_copy_buttons =='undefined'){}else{
+    create_copy_buttons(window, document);
+  };
+</script>
