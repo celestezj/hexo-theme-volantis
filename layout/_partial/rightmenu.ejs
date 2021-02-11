@@ -16,8 +16,7 @@
         <% } else if (obj.url) { %>
           id="<%= url_for(obj.url).replace(/\/|%|\./g, "")?url_for(obj.url).replace(/\/|%|\./g, ""):"home" %>"
         <% } %>>
-        <% if (obj.icon) { %><i class='<%= obj.icon %> fa-fw'></i><% } %> <%- obj.name %>
-      </a>
+        <% if (obj.icon) { %><i class='<%= obj.icon %> fa-fw'></i><% } %><%- obj.name %></a>
     </li>
   <% } %>
 
