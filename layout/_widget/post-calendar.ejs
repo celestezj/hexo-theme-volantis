@@ -65,12 +65,17 @@
         visualMap: {
             show: true,
             showLabel: true,
+			min: 0,
+			max: 100,
             categories: [0, 1, 2, 3, 4],
             calculable: true,
             inRange: {
                 symbol: 'rect',
                 color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
             },
+			outOfRange: {
+			    color: '#ff0000'
+			},
             itemWidth: 12,
             itemHeight: 12,
             orient: 'horizontal',
