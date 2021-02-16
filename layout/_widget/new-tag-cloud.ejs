@@ -39,7 +39,7 @@ var isTag = is_tag();
   /*tags边框*/
   .chip-container .chip {
     margin: 10px 10px;
-    padding: 19px 14px;
+    padding: 15px 14px; /*19,14*/
     display: inline-flex;
     line-height: 0;
     font-size: 1rem;
@@ -70,7 +70,7 @@ var isTag = is_tag();
                     <span class="chip center-align waves-effect waves-light
                             <% if (isTag && tag.name == page.tag) { %> chip-active <% } else { %> chip-default <% } %>"
                             data-tagname="<%- tag.name %>" style="background-color: <%- color %>;"><%- tag.name %>
-                        <span class="tag-length"><%- tag.length %></span>
+                        <span class="tag-length">×<%- tag.length %></span>
                     </span>
                 </a>
                 <% }); %>

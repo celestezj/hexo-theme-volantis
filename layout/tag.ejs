@@ -14,6 +14,9 @@
               <%- list_tags({}) %>
             </div>
 		  <% } %>
+		  <% if (site.tags.length>1) { %>
+		    <%- partial('_widget/tag-pie') %>
+		  <% } %>
           <br>
           <%- page.content %>
         </article>
