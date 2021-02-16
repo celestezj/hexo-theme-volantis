@@ -47,7 +47,7 @@
     datePosts += ']'; %>
 
     var option = {
-	    animation: true,
+	    animation: false,
         title: {
             top: 0,
             text: '文章日历',
@@ -63,7 +63,7 @@
             borderWidth: 1,
             formatter: function (obj) {
                 var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '&nbsp;篇</div>';
+                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
             }
         },
         visualMap: {
