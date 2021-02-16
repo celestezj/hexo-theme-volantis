@@ -61,23 +61,26 @@
             borderWidth: 1,
             formatter: function (obj) {
                 var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
+                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '&nbsp;篇</div>';
             }
         },
         visualMap: {
-            show: true,
+		    show: true,
             showLabel: true,
 			min: 0,
-			max: 10000,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-			outOfRange: {
-			    color: '#ff0000'
+			max: 100,
+			type: 'piecewise',
+			pieces: [
+				{min: 0, max: 0, label: '0', color: '#ebedf0'},
+				{min: 0, max: 1, label: '1', color: '#c6e48b'},
+				{min: 1, max: 2, label: '2', color: '#7bc96f'},
+				{min: 2, max: 3, label: '3', color: '#239a3b'},
+				{min: 3, label: '4+', color: '#196127'}
+			],
+			textStyle: {
+				color: '#000'
 			},
+            calculable: true,
             itemWidth: 12,
             itemHeight: 12,
             orient: 'horizontal',
