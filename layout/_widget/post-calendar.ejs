@@ -15,7 +15,9 @@
 </div>
 
 <script type="text/javascript">
-    var myChart = echarts.init(document.getElementById('post-calendar'));
+    //window.onload=function(){
+	//setTimeout(function(){
+	var myChart = echarts.init(document.getElementById('post-calendar'));
 	window.addEventListener("resize", () => { myChart.resize(); });
 
     <%
@@ -126,5 +128,7 @@
 
     };
     myChart.setOption(option);
+	//}
+	//},200);
 	setTimeout(function(){myChart.resize();},200);
 </script>

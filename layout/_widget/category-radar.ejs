@@ -12,7 +12,9 @@
 </div>
 
 <script type="text/javascript">
-    var radarChart = echarts.init(document.getElementById('category-radar'));
+    //window.onload=function(){
+	//setTimeout(function(){
+	var radarChart = echarts.init(document.getElementById('category-radar'));
 	window.addEventListener("resize", () => { radarChart.resize(); });
 
     <%
@@ -64,6 +66,7 @@
     };
 
     radarChart.setOption(option);
+	//}
+	//},200);
 	setTimeout(function(){radarChart.resize();},200); //https://blog.csdn.net/weixin_37817251/article/details/90046795
-	//window.onload=function(){radarChart.resize();}
 </script>
